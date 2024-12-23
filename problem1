@@ -1,0 +1,15 @@
+function countLetter(input){
+const result ={};
+const format =input.replace(/\s+g,"").toUpperCase();
+for(const char of format){
+result[char]=(result[char]||0)+1;
+}
+
+let output ='';
+for (const [char,count] of Object.entries(result)){
+output+= `${char}-${count}\n`;
+}
+return output.trim()
+}
+
+console.log(countLetter("Amolya Sharma")
